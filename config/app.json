@@ -2,5 +2,12 @@
   "app_name": "cloudrestaurant",
   "app_mode": "debug",
   "app_host": "localhost",
-  "app_port": "8090"
+  "app_port": "8090",
+  "sms": {
+    "sign_name": "DeGary",
+    "template_code": "SMS_205445516",
+    "app_key": "LTAI4GJwho6vcMwPGwATLjaZ",
+    "app_secret": "WdfhimPS7kDSdr2qIPC7aONL3hfmDm",
+    "region_id": "cn-hangzhou"
+  }
 }
