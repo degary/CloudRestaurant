@@ -6,8 +6,8 @@
   "sms": {
     "sign_name": "DeGary",
     "template_code": "SMS_205445516",
-    "app_key": "LTAI4GJwho6vcMwPGwATLjaZ",
-    "app_secret": "WdfhimPS7kDSdr2qIPC7aONL3hfmDm",
+    "app_key": "LTAI4GJwho6vcMw",
+    "app_secret": "WdfhimPS7kDSd",
     "region_id": "cn-hangzhou"
   }
 }
