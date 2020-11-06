@@ -6,8 +6,18 @@
   "sms": {
     "sign_name": "DeGary",
     "template_code": "SMS_205445516",
-    "app_key": "LTAI4GJwho6vcMw",
-    "app_secret": "WdfhimPS7kDSd",
+    "app_key": "LTAI4GJwho6vcMwPGwATLjaZ",
+    "app_secret": "WdfhimPS7kDSdr2qIPC7aONL3hfmDm",
     "region_id": "cn-hangzhou"
+  },
+  "database": {
+    "driver": "mysql",
+    "user": "root",
+    "password": "123456",
+    "host": "localhost",
+    "port": "3306",
+    "db_name": "cloudrestaurant",
+    "charset": "utf8",
+    "show_sql": true
   }
 }

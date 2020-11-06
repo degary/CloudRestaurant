@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/dysmsapi"
+	"github.com/degary/CloudRestaurant/dao"
+	"github.com/degary/CloudRestaurant/model"
 	"github.com/degary/CloudRestaurant/tool"
 	"math/rand"
 	"time"
@@ -47,7 +49,16 @@ func (ms *MemberService) SendCode(phone string) bool {
 	}
 
 	if response.Code == "OK" {
-		return true
+		//将验证码保存到数据库中
+		smsCode := model.SmsCode{
+			Phone:      phone,
+			BizId:      response.BizId,
+			Code:       code,
+			CreateTime: time.Now().Unix(),
+		}
+		memberDao := dao.MemberDao{tool.DbEngine}
+		result := memberDao.InsertCode(smsCode)
+		return result > 0
 	}
 	return false
 }

@@ -12,6 +12,13 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	_, err = tool.OrmEngine(cfg)
+	if err != nil {
+		fmt.Errorf("初始化orm engine错误: %s", err.Error())
+		return
+	}
+
 	port := fmt.Sprintf("%s:%s", cfg.AppHost, cfg.AppPort)
 	app := gin.Default()
 	registerRouter(app)
