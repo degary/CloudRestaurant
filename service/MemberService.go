@@ -36,15 +36,16 @@ func (ms *MemberService) SendCode(phone string) bool {
 		fmt.Errorf("解析code失败: %s", err.Error())
 		return false
 	}
-	request.TemplateCode = string(par)
+	request.TemplateParam = string(par)
 
 	//3.接收返回结果,并判断状态
 	response, err := client.SendSms(request)
+	fmt.Println(response)
 	if err != nil {
 		fmt.Errorf("发送失败: %s", err.Error())
 		return false
 	}
-	fmt.Println(response)
+
 	if response.Code == "OK" {
 		return true
 	}

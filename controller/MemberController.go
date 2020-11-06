@@ -12,7 +12,7 @@ func (mc *MemberController) Router(engine *gin.Engine) {
 	engine.GET("/api/sendcode", mc.SendSmsCode)
 }
 
-// http://localhost:8090/api/sendcode?phone=1131311131
+// http://localhost:8090/api/sendcode?phone=13581952940
 func (mc *MemberController) SendSmsCode(context *gin.Context) {
 	//发送验证码
 	phone, exist := context.GetQuery("phone")
